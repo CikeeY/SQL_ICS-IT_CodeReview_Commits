@@ -25,7 +25,9 @@ begin
 	begin
 		create table #ProcessedRows (
 			ActionType varchar(255),
-			ID int
+			ID int,
+			MDT_ID_PrincipalCreatedBy int not null,
+			MDT_DateCreate datetime not null
 		)
 	end
 	
