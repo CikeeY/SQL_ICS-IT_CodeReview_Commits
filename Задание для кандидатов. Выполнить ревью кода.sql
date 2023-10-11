@@ -13,13 +13,13 @@ begin
 	where f.ID = @ID_Record
 		and f.FlagLoaded = cast(1 as bit)
 	)
-		begin
-			set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
+	begin
+		set @ErrorMessage = 'Ошибка при загрузке файла, проверьте корректность данных'
 
-			raiserror(@ErrorMessage, 3, 1)
-			
-			return
-		end
+		raiserror(@ErrorMessage, 3, 1)
+		
+		return
+	end
 
 	CREATE TABLE #ProcessedRows (
 		ActionType varchar(255),
