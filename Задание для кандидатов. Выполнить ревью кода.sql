@@ -23,7 +23,7 @@ begin
 
 	if object_id('#ProcessedRows') is null
 	begin
-		CREATE TABLE #ProcessedRows (
+		create table #ProcessedRows (
 			ActionType varchar(255),
 			ID int
 		)
