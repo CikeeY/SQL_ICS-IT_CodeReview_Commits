@@ -22,10 +22,13 @@ begin
 		return
 	end
 
-	CREATE TABLE #ProcessedRows (
-		ActionType varchar(255),
-		ID int
-	)
+	if object_id('#ProcessedRows') is null
+	begin
+		CREATE TABLE #ProcessedRows (
+			ActionType varchar(255),
+			ID int
+		)
+	end
 	
 	-- Чтение из слоя временных данных
 	select
